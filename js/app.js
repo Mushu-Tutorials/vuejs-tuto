@@ -5,7 +5,12 @@ new Vue ({
         message2: 'MushuLeDragon',
         message3: 'MushuLeDragon avec titre',
         link: 'https://github.com/MushuLeDragon',
-        success: false,
+        success: true,
         persons: ['Amonok', 'MushuLeDragon', 'tsauvajon', 'SXAsor', 'GoldenShower']
+    },
+    methods: {
+        close: function () {
+            this.success = false
+        }
     }
 })

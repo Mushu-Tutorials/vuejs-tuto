@@ -5,7 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.3.1/dist/semantic.min.css">
+
     <title>VueJS Tuto</title>
+
 </head>
 
 <body>
@@ -18,16 +22,21 @@
         <a :href="link" :title="message2">{{ message3 }}</a>
         <br>
 
-        <div v-if="success">
+        <div class="ui success message" v-if="success">
             <p>Bravo votre enregistrement a fonctionné.</p><br>
         </div>
-        <div v-else>
+        <div class="ui echec message" v-else>
             <p>Echec ça n'a pas marché.</p><br>
         </div>
 
         <ul>
             <li v-for="person in persons">{{ person }}</li>
         </ul>
+
+        <div class="ui success message" v-if="success">
+            <i class="close icon" v-on:click="close"></i>
+            <p>Bravo votre enregistrement a fonctionné.</p><br>
+        </div>
     </div>
 
 

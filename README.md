@@ -12,6 +12,7 @@
   - Pour un lien : `<a v-bind:href="link">{{ message2 }}</a>` (N.B.: on peut ne pas mettre `v-bind` et simplement utiliser cette syntaxe : `<a :href="link">{{ message2 }}</a>`)
   - `v-if="success"` et `v-else` : balises avec des conditions. Si la condition est remplie, la balise est affichée, sinon le else ou rien (on peut tester en modifiant la variable `success` du fichier app.js)
   - `v-for` permet de boucler sur plusieurs éléments : `<li v-for="person in persons">{{ person }}</li>`
+  - `v-on` fait référence à un attribut de la balise, on utilise donc cette syntaxe : `v-on:click` et on l'attribue donc a un évènement (click, change, focus...) qui fera appel à une __méthode__ (app.js)
 
 ```html
 <body>
@@ -29,6 +30,7 @@
 - `new Vue ({})` : initialisation de vue et insertion des différents attributs
   - `el: '#app'` qui fait référence à l'attribut id='app' de l'index.html
   - `data: {}` qui liste les différentes variables qui seront distribuées
+  - `methods: {}` qui regroupe les différentes méthodes qui seront appelées par Vue
   
 ```js
 
