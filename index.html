@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>VueJS Tuto</title>
+</head>
+
+<body>
+
+    <div id="app">
+        {{ message }}
+        <br>
+        <a v-bind:href="link">{{ message2 }}</a>
+        <br>
+        <a :href="link" :title="message2">{{ message3 }}</a>
+        <br>
+
+        <div v-if="success">
+            <p>Bravo votre enregistrement a fonctionné.</p><br>
+        </div>
+        <div v-else>
+            <p>Echec ça n'a pas marché.</p><br>
+        </div>
+
+        <ul>
+            <li v-for="person in persons">{{ person }}</li>
+        </ul>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>

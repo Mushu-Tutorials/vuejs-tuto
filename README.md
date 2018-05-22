@@ -1,4 +1,40 @@
-# VueJSTuto
+# VueJS Tuto
+
+## Initialisation du projet
+
+### Page HTML
+
+- Ajout du [CDN](https://vuejs.org/v2/guide/installation.html#CDN "CDN VueJS") à la page HTML dans le body : `<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>`
+- Ajout du script app.js dans le body sous le CDN : `<script src="js/app.js"></script>`
+- Création d'un div avec un attribut id='app' : `<div id="app"></div>`
+- Récupération des variables stockées dans VueJS grâce aux {{ }}
+- Si on souhaite récupérer la variable __dans un attribut d'une balise__, il faut utiliser la syntaxe de vue
+  - Pour un lien : `<a v-bind:href="link">{{ message2 }}</a>` (N.B.: on peut ne pas mettre `v-bind` et simplement utiliser cette syntaxe : `<a :href="link">{{ message2 }}</a>`)
+  - `v-if="success"` et `v-else` : balises avec des conditions. Si la condition est remplie, la balise est affichée, sinon le else ou rien (on peut tester en modifiant la variable `success` du fichier app.js)
+  - `v-for` permet de boucler sur plusieurs éléments : `<li v-for="person in persons">{{ person }}</li>`
+
+```html
+<body>
+    <div id="app">
+        {{ message }}
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+    <script src="js/app.js"></script>
+</body>
+```
+
+### Page app.js
+
+- `new Vue ({})` : initialisation de vue et insertion des différents attributs
+  - `el: '#app'` qui fait référence à l'attribut id='app' de l'index.html
+  - `data: {}` qui liste les différentes variables qui seront distribuées
+  
+```js
+
+```
+
+---
 
 ## Prérequis
 
